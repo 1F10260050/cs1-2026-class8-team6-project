@@ -2,7 +2,6 @@ h1{
     color: green;
 }
 
-/* 1. 画像とテキストを囲む親要素 */
 .main-visual {
   position: relative; /* 子要素の配置の基準点にする */
   width: 100%;
@@ -21,8 +20,8 @@ h1{
 /* 3. 画像の上に重ねるテキスト */
 .overlay-text {
   position: absolute; /* 親要素を基準に絶対配置する */
-  top: 50%;           /* 上から50%の位置に配置 */
-  right: 10%;         /* 右から10%の位置に配置（画像に合わせて調整） */
+  top: 48%;           /* 上から50%の位置に配置 */
+  right: 15%;         /* 右から10%の位置に配置（画像に合わせて調整） */
   transform: translateY(-50%); /* 縦方向の真ん中合わせ */
   
   color: #ffffff;     /* 文字色を白に */
@@ -31,9 +30,10 @@ h1{
 
 /* 必要に応じてフォントサイズなどを調整 */
 .overlay-text h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
   letter-spacing: 0.1em;
+  color: #ffffff;
 }
 
 .overlay-text .subtitle {
