@@ -40,3 +40,84 @@ h1{
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
+
+/* セクション全体の調整 */
+.recommend-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* 見出し（中央揃え） */
+.recommend-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 0.1em;
+}
+
+/* 3つのカードを横並びにする（親要素） */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* 3つのカードを等間隔に配置 */
+  gap: 20px;                      /* カード同士のすき間 */
+}
+
+/* 楽曲カードの共通スタイル */
+.card {
+  display: flex;       /* カード内の「画像」と「情報」を横並びにする */
+  align-items: center; /* 縦方向を中央揃えにする */
+  flex: 1;             /* 3つのカードの幅を均等にする */
+  
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;  /* 角を少し丸める */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 軽い影をつける */
+}
+
+/* カード内の画像エリア */
+.card-img {
+  width: 40%;          /* カード内における画像の幅 */
+  margin-right: 15px;  /* 画像と右側テキストのすき間 */
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* カード内のテキスト情報エリア */
+.card-info {
+  width: 60%;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card-info .release-year {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+/* 「詳細を見る」ボタン */
+.detail-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+/* ボタンにマウスを乗せたときの動き */
+.detail-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #999999;
+}
