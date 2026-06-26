@@ -1,2 +1,180 @@
+/* ヘッダー全体のスタイル */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* ロゴとナビを左右の両端に分ける */
+  align-items: center;           /* 縦方向のセンター合わせ */
+  
+  padding: 15px 40px;            /* 上下と左右の余白 */
+  background-color: #ffffff;     /* 背景色は白 */
+  border-bottom: 1px solid #f0f0f0; /* 下部に薄い境界線を入れる */
+  
+  /* ページの一番上に固定したい場合は以下を追加（お好みで） */
+  /* position: sticky; top: 0; z-index: 100; */
+}
+
+/* ロゴ部分のスタイル */
+.header-logo a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;         /* リンクの下線を消す */
+  display: flex;
+  align-items: center;
+}
+
+.header-logo .icon {
+  margin-right: 8px;             /* アイコンと文字の間のすき間 */
+  font-size: 1.2rem;
+}
+
+/* ナビゲーション（メニュー）のスタイル */
+.header-nav ul {
+  display: flex;                 /* メニュー項目を横並びにする */
+  list-style: none;              /* 箇条書きの点を消す */
+  margin: 0;
+  padding: 0;
+  gap: 30px;                     /* メニュー項目同士のすき間 */
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.95rem;
+  padding-bottom: 5px;           /* 下線との間に少し隙間を作る */
+  transition: color 0.3s ease;
+}
+
+/* マウスを乗せたとき（ホバー時）の動き */
+.header-nav a:hover {
+  color: #999999;                /* 文字色を少し薄くする */
+}
+
+/* 現在いるページのメニュー（アクティブ状態）のスタイル */
+.header-nav li.active a {
+  font-weight: bold;
+  border-bottom: 2px solid #333333; /* 文字の下に太めの線を引く */
+}
+
+.main-visual {
+  position: relative; /* 子要素の配置の基準点にする */
+  width: 100%;
+  max-width: 1200px;  /* サイトの最大幅に合わせて調整 */
+  margin: 0 auto;
+  overflow: hidden;   /* 画像がはみ出さないようにする */
+}
+
 h1{
-    color: green;}
+    color: green;
+}
+
+/* 2. 背景画像の設定 */
+.bg-image {
+  width: 100%;
+  height: auto;
+  display: block;    /* 画像の下にできる謎の隙間を消す */
+}
+
+/* 3. 画像の上に重ねるテキスト */
+.overlay-text {
+  position: absolute; /* 親要素を基準に絶対配置する */
+  top: 48%;           /* 上から50%の位置に配置 */
+  right: 15%;         /* 右から10%の位置に配置（画像に合わせて調整） */
+  transform: translateY(-50%); /* 縦方向の真ん中合わせ */
+  
+  color: #ffffff;     /* 文字色を白に */
+  text-align: center; /* テキストを中央揃えに */
+}
+
+/* 必要に応じてフォントサイズなどを調整 */
+.overlay-text h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.overlay-text .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* セクション全体の調整 */
+.recommend-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* 見出し（中央揃え） */
+.recommend-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 0.1em;
+}
+
+/* 3つのカードを横並びにする（親要素） */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* 3つのカードを等間隔に配置 */
+  gap: 20px;                      /* カード同士のすき間 */
+}
+
+/* 楽曲カードの共通スタイル */
+.card {
+  display: flex;       /* カード内の「画像」と「情報」を横並びにする */
+  align-items: center; /* 縦方向を中央揃えにする */
+  flex: 1;             /* 3つのカードの幅を均等にする */
+  
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;  /* 角を少し丸める */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 軽い影をつける */
+}
+
+/* カード内の画像エリア */
+.card-img {
+  width: 40%;          /* カード内における画像の幅 */
+  margin-right: 15px;  /* 画像と右側テキストのすき間 */
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* カード内のテキスト情報エリア */
+.card-info {
+  width: 60%;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card-info .release-year {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+/* 「詳細を見る」ボタン */
+.detail-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+/* ボタンにマウスを乗せたときの動き */
+.detail-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #999999;
+}
