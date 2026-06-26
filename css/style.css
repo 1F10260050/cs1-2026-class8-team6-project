@@ -1,9 +1,71 @@
+/* ヘッダー全体のスタイル */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* ロゴとナビを左右の両端に分ける */
+  align-items: center;           /* 縦方向のセンター合わせ */
+  
+  padding: 15px 40px;            /* 上下と左右の余白 */
+  background-color: #ffffff;     /* 背景色は白 */
+  border-bottom: 1px solid #f0f0f0; /* 下部に薄い境界線を入れる */
+  
+  /* ページの一番上に固定したい場合は以下を追加（お好みで） */
+  /* position: sticky; top: 0; z-index: 100; */
+}
+
+/* ロゴ部分のスタイル */
+.header-logo a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;         /* リンクの下線を消す */
+  display: flex;
+  align-items: center;
+}
+
+.header-logo .icon {
+  margin-right: 8px;             /* アイコンと文字の間のすき間 */
+  font-size: 1.2rem;
+}
+
+/* ナビゲーション（メニュー）のスタイル */
+.header-nav ul {
+  display: flex;                 /* メニュー項目を横並びにする */
+  list-style: none;              /* 箇条書きの点を消す */
+  margin: 0;
+  padding: 0;
+  gap: 30px;                     /* メニュー項目同士のすき間 */
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.95rem;
+  padding-bottom: 5px;           /* 下線との間に少し隙間を作る */
+  transition: color 0.3s ease;
+}
+
+/* マウスを乗せたとき（ホバー時）の動き */
+.header-nav a:hover {
+  color: #999999;                /* 文字色を少し薄くする */
+}
+
+/* 現在いるページのメニュー（アクティブ状態）のスタイル */
+.header-nav li.active a {
+  font-weight: bold;
+  border-bottom: 2px solid #333333; /* 文字の下に太めの線を引く */
+}
+
+.main-visual {
+  position: relative; /* 子要素の配置の基準点にする */
+  width: 100%;
+  max-width: 1200px;  /* サイトの最大幅に合わせて調整 */
+  margin: 0 auto;
+  overflow: hidden;   /* 画像がはみ出さないようにする */
+}
 
 h1{
     color: green;
 }
-
-
 
 /* 2. 背景画像の設定 */
 .bg-image {
