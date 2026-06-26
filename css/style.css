@@ -58,16 +58,15 @@
 .main-visual {
   position: relative; /* 子要素の配置の基準点にする */
   width: 100%;
-  max-width: 1200px;  /* サイトの最大幅に合わせて調整 */
-  margin: 0 auto;
-  overflow: hidden;   /* 画像がはみ出さないようにする */
+ height: 90vh;
+    overflow: hidden;   /* 画像がはみ出さないようにする */
 }
 
 /* 2. 背景画像の設定 */
 .bg-image {
   width: 100%;
-  height: auto;
-  display: block;    /* 画像の下にできる謎の隙間を消す */
+  height: 100%;
+  object-fit: cover;    /* 画像の下にできる謎の隙間を消す */
 }
 
 /* 3. 画像の上に重ねるテキスト */
@@ -118,7 +117,7 @@
 
 /* 楽曲カードの共通スタイル */
 .card {
-  display: flex;       /* カード内の「画像」と「情報」を横並びにする */
+  display: block;       /* カード内の「画像」と「情報」を横並びにする */
   align-items: center; /* 縦方向を中央揃えにする */
   flex: 1;             /* 3つのカードの幅を均等にする */
   
@@ -127,8 +126,12 @@
   border-radius: 8px;  /* 角を少し丸める */
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 軽い影をつける */
+  transition: .3s;
 }
-
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
 /* カード内の画像エリア */
 .card-img {
   width: 40%;          /* カード内における画像の幅 */
@@ -160,17 +163,20 @@
 /* 「詳細を見る」ボタン */
 .detail-btn {
   display: inline-block;
-  padding: 6px 12px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #4CAF50, #2E8B57);
+  color: white;
   text-decoration: none;
-  color: #333333;
-  font-size: 0.85rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
 /* ボタンにマウスを乗せたときの動き */
 .detail-btn:hover {
-  background-color: #f5f5f5;
-  border-color: #999999;
+background: linear-gradient(135deg, #2E8B57, #1F6F43);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
