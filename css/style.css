@@ -1,2 +1,42 @@
 h1{
-    color: green;}
+    color: green;
+}
+
+/* 1. 画像とテキストを囲む親要素 */
+.main-visual {
+  position: relative; /* 子要素の配置の基準点にする */
+  width: 100%;
+  max-width: 1200px;  /* サイトの最大幅に合わせて調整 */
+  margin: 0 auto;
+  overflow: hidden;   /* 画像がはみ出さないようにする */
+}
+
+/* 2. 背景画像の設定 */
+.bg-image {
+  width: 100%;
+  height: auto;
+  display: block;    /* 画像の下にできる謎の隙間を消す */
+}
+
+/* 3. 画像の上に重ねるテキスト */
+.overlay-text {
+  position: absolute; /* 親要素を基準に絶対配置する */
+  top: 50%;           /* 上から50%の位置に配置 */
+  right: 10%;         /* 右から10%の位置に配置（画像に合わせて調整） */
+  transform: translateY(-50%); /* 縦方向の真ん中合わせ */
+  
+  color: #ffffff;     /* 文字色を白に */
+  text-align: center; /* テキストを中央揃えに */
+}
+
+/* 必要に応じてフォントサイズなどを調整 */
+.overlay-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.overlay-text .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
