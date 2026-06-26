@@ -63,10 +63,6 @@
   overflow: hidden;   /* 画像がはみ出さないようにする */
 }
 
-h1{
-    color: green;
-}
-
 /* 2. 背景画像の設定 */
 .bg-image {
   width: 100%;
